@@ -37,8 +37,7 @@ function pagination($pages = '', $range = 1)
 }
 
 
-// Numeric Page Navi (built into the theme by default)
-function hs_page_navi() {
+function mywp_page_navi() {
     global $wp_query;
     $bignum = 999999999;
     if ( $wp_query->max_num_pages <= 1 )
@@ -59,5 +58,5 @@ function hs_page_navi() {
         ) );
     
     echo '</nav>';
-} /* end page navi */
+}
 

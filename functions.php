@@ -1,7 +1,7 @@
 <?php
 /**
- * Functions.php for MYWPTheme Theme by Michael Yap of michaelsmyap.com
- * This file will include functions that will be used by the MYWPTheme Theme
+ * Functions.php for MYWP Theme by Michael Yap of michaelsmyap.com
+ * This file will include functions that will be used by the MYWP Theme
  *
  * @package WordPress
  * @subpackage MYWPTheme
@@ -45,8 +45,6 @@ require_once('inc/post_tax.php');
 require_once('inc/pagination.php');
 // Duplicate Post Content
 require_once('inc/duplicate_post.php');
-// Include Timthumb
-require_once('inc/timthumb_extension.php');
 // Include Custom Functions
 require_once('inc/custom_functions.php');
 // Include Custom Filters

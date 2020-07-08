@@ -1,15 +1,15 @@
 <?php 
-/**
- * taxonomy-work-category.php 
- * This is the page where the blogroll will be displayed.
- * 
- * @package WordPress
- * @subpackage MYWPTheme
- * @since HS 1.0
- */ 
-get_header(); 
-$post_count = $wp_query->post_count;
-$tax_title = get_queried_object()->name;
+  /**
+   * taxonomy-work-category.php 
+   * This is the page where the blogroll will be displayed.
+   * 
+   * @package WordPress
+   * @subpackage MYWPTheme
+   * @since MYWP 1.0
+   */ 
+  get_header(); 
+  $post_count = $wp_query->post_count;
+  $tax_title = get_queried_object()->name;
 ?>
     <div id="content">
 
@@ -82,7 +82,7 @@ $tax_title = get_queried_object()->name;
             endwhile;
           ?>
         
-        <?php hs_page_navi(); ?>
+        <?php mywp_page_navi(); ?>
       
       </div><!-- end .page-boxed -->
       

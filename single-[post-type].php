@@ -1,6 +1,6 @@
 <?php 
 /**
- * single.php 
+ * single-services.php 
  * This is the page where the blog post will be displayed.
  * 
  * @package WordPress

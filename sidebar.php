@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage MYWPTheme
- * @since HS 1.0
+ * @since MYWP 1.0
  */ 
 ?>
 <aside>
