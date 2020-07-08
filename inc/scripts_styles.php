@@ -1,14 +1,10 @@
 <?php
 
-//Making jQuery Google API
 add_action('init', 'modify_jquery'); 
 function modify_jquery() {
     if (!is_admin()) {
         // comment out the next two lines to load the local copy of jQuery
         wp_deregister_script('jquery');
-        // wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
-        wp_register_script('jquery', THEME_DIR . '/js/vendor/jquery-1.10.2.min.js', false, '1.10.2', true);
-        wp_enqueue_script('jquery');
     }
 }
 
@@ -16,8 +12,8 @@ function modify_jquery() {
  * Register with hook 'wp_enqueue_scripts', which can be used for front end CSS and JavaScript
  * This will enqueue stylesheets and scripts to be used on various templates for the italiannis Theme.
  */
-add_action( 'wp_enqueue_scripts', 'add_hs_stylesheet_scripts' );
-function add_hs_stylesheet_scripts() {
+add_action( 'wp_enqueue_scripts', 'add_mywp_stylesheet_scripts' );
+function add_mywp_stylesheet_scripts() {
     // Respects SSL, Style.css is relative to the current file
     if(!is_admin()) {
         wp_register_style( 'normalize-css' , THEME_DIR . '/css/normalize.css' , '' , array() , $media = 'all' );
@@ -43,7 +39,6 @@ function add_hs_stylesheet_scripts() {
         if(is_singular( 'your-post-type here' )) {
     
         }
-
 
         if(is_page_template( 'your-template-file-here' )) {
         }

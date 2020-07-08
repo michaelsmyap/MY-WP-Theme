@@ -11,8 +11,8 @@ if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Global Settings',
-		'menu_title'	=> 'HS Global Settings',
-		'menu_slug' 	=> 'hs-global-settings',
+		'menu_title'	=> 'MYWP Global Settings',
+		'menu_slug' 	=> 'mywp-global-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));

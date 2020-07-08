@@ -17,17 +17,13 @@ function limit_posts_per_archive_page() {
         $limit = 3;
     endif;  
 
-    if ((is_post_type_archive( 'works' ) && !is_admin()) || (is_tax( 'work-category' ) && !is_admin())) :
-        $limit = 9;
-    endif;
+    // if ((is_post_type_archive( 'post-type-id' ) && !is_admin()) || (is_tax( 'taxonomy-id' ) && !is_admin())) :
+    //     $limit = 9;
+    // endif;
 
-    if (is_post_type_archive( 'works' ) && is_admin()) :
-        $limit = 10;
-    endif;  
-
-    /* if ( (is_post_type_archive( 'your-post-type-here' ) || is_tax('your-custom-taxonomy-here')) && !is_admin()) :
-        $limit = 9;
-    endif;   */ 
+    // if (is_post_type_archive( 'post-type-id' ) && is_admin()) :
+    //     $limit = 10;
+    // endif;  
 
     set_query_var('posts_per_archive_page', $limit);
 }

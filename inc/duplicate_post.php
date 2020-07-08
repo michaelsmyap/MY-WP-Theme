@@ -3,9 +3,9 @@
 /*
  * Function creates post duplicate as a draft and redirects then to the edit post screen
  */
-function rd_duplicate_post_as_draft(){
+function mywp_duplicate_post_as_draft(){
     global $wpdb;
-    if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'rd_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
+    if (! ( isset( $_GET['post']) || isset( $_POST['post'])  || ( isset($_REQUEST['action']) && 'mywp_duplicate_post_as_draft' == $_REQUEST['action'] ) ) ) {
         wp_die('No post to duplicate has been supplied!');
     }
  
@@ -88,16 +88,16 @@ function rd_duplicate_post_as_draft(){
         wp_die('Post creation failed, could not find original post: ' . $post_id);
     }
 }
-add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_draft' );
+add_action( 'admin_action_mywp_duplicate_post_as_draft', 'mywp_duplicate_post_as_draft' );
  
 /*
  * Add the duplicate link to action list for post_row_actions
  */
-function rd_duplicate_post_link( $actions, $post ) {
+function mywp_duplicate_post_link( $actions, $post ) {
     if (current_user_can('edit_posts')) {
-        $actions['duplicate'] = '<a href="admin.php?action=rd_duplicate_post_as_draft&amp;post=' . $post->ID . '" title="Duplicate this item" rel="permalink">Duplicate</a>';
+        $actions['duplicate'] = '<a href="admin.php?action=mywp_duplicate_post_as_draft&amp;post=' . $post->ID . '" title="Duplicate this item" rel="permalink">Duplicate</a>';
     }
     return $actions;
 }
  
-add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
+add_filter( 'post_row_actions', 'mywp_duplicate_post_link', 10, 2 );

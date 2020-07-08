@@ -21,7 +21,7 @@ function pass_query( $jquery_code = NULL )
 }
 
 // Get Thumbnail URL
-function hs_post_thumbnail_url () {
+function mywp_post_thumbnail_url () {
 	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 	$url = $thumb['0'];
 	return $url;
